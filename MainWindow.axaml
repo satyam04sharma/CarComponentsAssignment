@@ -1,0 +1,27 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="CarCostCalculator.MainWindow"
+        Title="Car Customization">
+    <StackPanel>
+        <!-- Dropdown for Car Model Selection -->
+        <ComboBox x:Name="CarModelComboBox" PlaceholderText="Select Car Model">
+            <ComboBoxItem Content="C" />
+            <ComboBoxItem Content="E" />
+            <ComboBoxItem Content="CS" />
+        </ComboBox>
+
+        <!-- Checkboxes for Additional Features -->
+        <CheckBox x:Name="V8EngineCheckBox" Content="V-8 Engine" />
+        <CheckBox x:Name="V12EngineCheckBox" Content="V-12 Engine" />
+        <CheckBox x:Name="SunRoofCheckBox" Content="Sun Roof" />
+        <CheckBox x:Name="OversizedGasTankCheckBox" Content="Oversized Gas Tank" />
+        <CheckBox x:Name="RadioCheckBox" Content="Blaupunkt New York 800 Radio" />
+        <CheckBox x:Name="SpareTireCheckBox" Content="Spare Tire" />
+
+        <!-- Button to Calculate Total Cost -->
+        <Button x:Name="CalculateButton" Content="Calculate" Click="CalculateButton_Click" />
+
+        <!-- Text Area for Order Summary -->
+        <TextBlock x:Name="OrderSummaryTextBlock" />
+    </StackPanel>
+</Window>
