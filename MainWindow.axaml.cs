@@ -16,45 +16,45 @@ namespace CarCostCalculator
             AvaloniaXamlLoader.Load(this);
         }
 
-
-    private void CalculateButton_Click(object sender, RoutedEventArgs e)
-    {
-        Car car = null;
-
-        // Determine the base model
-        var selectedModel = CarModelComboBox.SelectedItem as ComboBoxItem;
-        switch (selectedModel?.Content)
+        private void CalculateButton_Click(object sender, RoutedEventArgs e)
         {
-            case "C":
-                car = new CModel();
-                break;
-            case "E":
-                car = new EModel();
-                break;
-            case "CS":
-                car = new CSModel();
-                break;
-            default:
-                // Handle error case
-                OrderSummaryTextBlock.Text = "Please select a car model.";
-                return;
-        }
+            Car car = null;
 
-        // Apply additional features
-        if (V8EngineCheckBox.IsChecked == true)
-        car = new V8Engine(car);
-        if (V12EngineCheckBox.IsChecked == true)
-            car = new V12Engine(car);
-        if (SunRoofCheckBox.IsChecked == true)
-            car = new SunRoof(car);
-        if (OversizedGasTankCheckBox.IsChecked == true)
-            car = new OversizedGasTank(car);
-        if (RadioCheckBox.IsChecked == true)
-            car = new BlaupunktRadio(car);
-        if (SpareTireCheckBox.IsChecked == true)
-            car = new SpareTire(car);
+            // Determine the base model
+            var selectedModel = CarModelComboBox.SelectedItem as ComboBoxItem;
+            switch (selectedModel?.Content)
+            {
+                case "C":
+                    car = new CModel();
+                    break;
+                case "E":
+                    car = new EModel();
+                    break;
+                case "CS":
+                    car = new CSModel();
+                    break;
+                default:
+                    // Handle error case
+                    OrderSummaryTextBlock.Text = "Please select a car model.";
+                    return;
+            }
 
-        // Calculate and display the cost and description
-        OrderSummaryTextBlock.Text = $"New Order:\nCar: {car.Description}\nCost: ${car.Cost():N2}\nEnd Order";
+            // Apply additional features
+            if (V8EngineCheckBox.IsChecked == true)
+                car = new V8Engine(car);
+            if (V12EngineCheckBox.IsChecked == true)
+                car = new V12Engine(car);
+            if (SunRoofCheckBox.IsChecked == true)
+                car = new SunRoof(car);
+            if (OversizedGasTankCheckBox.IsChecked == true)
+                car = new OversizedGasTank(car);
+            if (RadioCheckBox.IsChecked == true)
+                car = new BlaupunktRadio(car);
+            if (SpareTireCheckBox.IsChecked == true)
+                car = new SpareTire(car);
+
+            // Calculate and display the cost and description
+            OrderSummaryTextBlock.Text = $"New Order:\nCar: {car.Description}\nCost: ${car.Cost():N2}\nEnd Order";
+        } // This closing brace was missing
     }
 }

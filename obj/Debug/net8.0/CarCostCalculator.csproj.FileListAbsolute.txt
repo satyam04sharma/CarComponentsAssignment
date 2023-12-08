@@ -1,0 +1,8 @@
+/Users/satyamsharma/Documents/APL/CarCostCalculator/obj/Debug/net8.0/CarCostCalculator.csproj.AssemblyReference.cache
+/Users/satyamsharma/Documents/APL/CarCostCalculator/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache
+/Users/satyamsharma/Documents/APL/CarCostCalculator/obj/Debug/net8.0/Avalonia/resources
+/Users/satyamsharma/Documents/APL/CarCostCalculator/obj/Debug/net8.0/CarCostCalculator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/satyamsharma/Documents/APL/CarCostCalculator/obj/Debug/net8.0/CarCostCalculator.AssemblyInfoInputs.cache
+/Users/satyamsharma/Documents/APL/CarCostCalculator/obj/Debug/net8.0/CarCostCalculator.AssemblyInfo.cs
+/Users/satyamsharma/Documents/APL/CarCostCalculator/obj/Debug/net8.0/CarCostCalculator.csproj.CoreCompileInputs.cache
+/Users/satyamsharma/Documents/APL/CarCostCalculator/obj/Debug/net8.0/CarCostCalculator.sourcelink.json
